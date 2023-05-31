@@ -1,3 +1,4 @@
+import { click } from "@testing-library/user-event/dist/click";
 import React,{useState} from "react";
 
 function Followers(props){
@@ -19,6 +20,10 @@ function Followers(props){
         dropdownMenu.classList.toggle("show");
         
     }
+    function run(click){
+        sessionStorage.setItem("user_name",click)
+        window.location.reload()
+    }
 
     return(
         
@@ -29,8 +34,15 @@ function Followers(props){
         {loading && 
         
         <div className="dropdown-menu" id="dropdown3" aria-labelledby="dropdownMenuButton">
-            {data.map((i)=> 
-                <a className="dropdown-item">{i.login}</a>
+            {data.map((i)=>
+                <>
+                <div style={{display:"flex", borderBottom:"1px solid",padding:"2px"}}>
+                    <img style={{height:"50px"}} src={i.avatar_url}></img>
+                    <a className="dropdown-item" href="">{i.login}</a>
+                </div>
+                
+                </>
+                
             )}
         </div>
         }
