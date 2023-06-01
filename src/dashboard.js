@@ -4,45 +4,35 @@ import Following from "./following";
 import Repos from "./repos";
 function Dashboard(){
 
-    // function run(){
-        
-        // fetch("https://api.github.com/users/jayashreebalinani")
-        fetch("https://api.github.com/users/naveendoddi")
-        .then(response => response.json())
-        .then((data)=>{
-            sessionStorage.setItem("data", JSON.stringify(data))
-        })
-
-    // }
-
-    var data = JSON.parse(sessionStorage.getItem("data"))
-    sessionStorage.setItem("user_name",data.login)
-    console.log(data.following_url)
+    var [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")))
     return(
 
         <>
         <div>
-        <h2 className="h2">GIT_HIB</h2>
-            <div style={{display:"flex"}}>
-                <img style={{height:"150px",borderRadius:"100%"}} src={data.avatar_url}></img>
-                <div >
-                    <h4 className="h4">user_name : { data.login}</h4>
-                    <h6>joined on : {(data.created_at).toString().split("T")[0]} </h6>
+        <h2 className="h2 text-center">GIT_HIB</h2>
+            
+            <div className="row display-flex">
+                <div className="col-sm-12 col-md-6 text-right" style={{width:"100px"}}>
+                    
+                    <img style={{height:"140px",borderRadius:"100%"}} src={data.avatar_url}></img>
+                    <h4 className="h4">{data.login}</h4>
+                </div>
+                
+                <div className="col-sm-12 col-md-6 text-left">
+                    <h3>Name : {data.name}</h3>
+                    
+                    <h6>id : {data.id}</h6>
+                    <h6>joined on : {(data.created_at).toString().split("T")[0]}</h6>
                     <h6> <a href = {data.html_url}>profile</a> </h6>
                     <Repos count = {data.public_repos} link = {data.repos_url}/>
                     <Followers followers = {data.followers} />
                     <Following following = {data.following} />
                     
-                    <button className="btn btn-success">fetch</button>
                 </div>
 
             </div>
-
-            
-            
-
-            
-          </div>  
+          </div>
+        
         </>
     )
 }
