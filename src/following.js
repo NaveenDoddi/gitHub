@@ -47,7 +47,7 @@ function Following(props){
     }
     return(
         <>
-        <div className="dropdown float-left">
+        <div className="dropdown">
 
         <button className="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowing}> following {props.following}</button>
         {loading && 

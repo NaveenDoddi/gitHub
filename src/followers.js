@@ -47,7 +47,7 @@ function Followers(props){
     return(
         
         <>
-        <div className="dropdown float-left">
+        <div className="dropdown">
 
         <button className="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowers}> followers {props.followers}</button>
         {loading && 
