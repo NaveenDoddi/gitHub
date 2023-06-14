@@ -35,28 +35,28 @@ function Dashboard(){
                     <table className="table table-sm">
                         <tr>
                             <th>Name</th>
-                            <th colSpan={2}>{data.name}</th>
+                            <th>{data.name}</th>
                         </tr>
                         <tr>
                             <td><h6>id</h6></td>
-                            <td colSpan={2}><h6>{data.id}</h6></td>
+                            <td><h6>{data.id}</h6></td>
                         </tr>
                         <tr>
                             <td><h6>twitter</h6></td>
-                            <td colSpan={2}><h6>{data.twitter_username}</h6></td>
+                            <td><h6>{data.twitter_username}</h6></td>
                         </tr>
                         <tr>
                             <td><h6>email</h6></td>
-                            <td colSpan={2}><h6>{data.email}</h6></td>
+                            <td><h6>{data.email}</h6></td>
                         </tr>
                         <tr>
                             <td><h6>joined on</h6></td>
-                            <td colSpan={2}><h6>{(data.created_at).toString().split("T")[0]}</h6></td>
+                            <td><h6>{(data.created_at).toString().split("T")[0]}</h6></td>
                         </tr>
                         <tr>
-                            <td><Repos count = {data.public_repos} link = {data.repos_url}/></td>
-                            <td><Followers followers = {data.followers} user = {data.login}/></td>
-                            <td><Following following = {data.following} user = {data.login} /></td>
+                            <td className="btn"><Repos count = {data.public_repos} link = {data.repos_url}/></td>
+                            <td className="btn"><Followers followers = {data.followers} user = {data.login}/></td>
+                            <td className="btn"><Following following = {data.following} user = {data.login} /></td>
                         </tr>
                         <tr>
                             <td colSpan={3}><h6><a href = {data.html_url}>profile</a></h6></td>
