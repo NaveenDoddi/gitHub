@@ -49,7 +49,7 @@ function Following(props){
         <>
         <div className="dropdown">
 
-        <button className="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowing}> following {props.following}</button>
+        <button className="btn w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowing}> following {props.following}</button>
         {loading && 
         
         <div className="dropdown-menu" id="dropdown2" aria-labelledby="dropdownMenuButton" style={{height:"500px",overflow:"scroll",border:"none"}}>

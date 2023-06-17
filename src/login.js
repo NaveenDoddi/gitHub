@@ -17,7 +17,7 @@ function Login(){
                     if (window.confirm("remember the username")) {
                         localStorage.setItem("data",JSON.stringify(data))
                     } else {
-                        sessionStorage.setItem("data",data)
+                        sessionStorage.setItem("data",JSON.stringify(data))
                     }
 
                     sessionStorage.setItem("username",data.login)
@@ -41,7 +41,7 @@ function Login(){
 
     return(
         <>
-        <div className="text-center text-light bg-dark" style={{padding:"20px",border:"2px solid",margin:"20px"}}>
+        <div className="text-center text-light bg-dark" style={{padding:"20px",border:"2px solid",margin:"5px"}}>
         <h2>GIT_HBU</h2>
         <p>you need github account to use this website</p>
         <p>enter your github_id in the given box</p>
