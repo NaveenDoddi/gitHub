@@ -43,10 +43,7 @@ function Dashboard(){
                                 <td><h6>id</h6></td>
                                 <td><h6>{data.id}</h6></td>
                             </tr>
-                            <tr>
-                                <td><h6>twitter</h6></td>
-                                <td><h6>{data.twitter_username}</h6></td>
-                            </tr>
+                            
                             <tr>
                                 <td><h6>joined on</h6></td>
                                 <td><h6>{(data.created_at).toString().split("T")[0]}</h6></td>
@@ -54,6 +51,10 @@ function Dashboard(){
                             <tr>
                                 <td><h6>location</h6></td>
                                 <td><h6>{data.location}</h6></td>
+                            </tr>
+                            <tr>
+                                <td><h6>twitter id</h6></td>
+                                <td><h6>{data.twitter_username}</h6></td>
                             </tr>
                             <tr>
                                 <td colSpan={2}><h6><a href = {data.html_url}>profile</a></h6></td>
@@ -74,5 +75,6 @@ function Dashboard(){
         </>
     )
 }
+
 
 export default Dashboard
