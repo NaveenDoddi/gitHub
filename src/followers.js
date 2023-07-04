@@ -17,7 +17,6 @@ function Followers(props){
     }
 
     run()
-
     function showFollowers(){
         if(loading){
             var dropdownMenu = document.querySelector("#dropdown3");
