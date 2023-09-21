@@ -23,8 +23,6 @@ function Repos(repos){
             var dropdownMenu = document.querySelector("#dropdown1");
             dropdownMenu.classList.toggle("show");
         }
-
-
         
     }
 
@@ -39,7 +37,7 @@ function Repos(repos){
             {data.map((i)=>
                 <>
                 <div>
-                <a className="dropdown-item text-light" href={"https://"+i.owner.login+".github.io/"+i.name }>{i.name}</a>
+                <a className="dropdown-item text-light" target="_blank" href={"https://"+i.owner.login+".github.io/"+i.name }>{i.name}</a>
                 <span>{i.branch}</span>
                 </div>
                 </>
