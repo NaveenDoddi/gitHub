@@ -14,11 +14,11 @@ function Search(){
                 if(data.message === undefined){
                     sessionStorage.setItem("data", JSON.stringify(data))
 
-                    if (window.confirm("remember the username")) {
-                        localStorage.setItem("data",JSON.stringify(data))
-                    } else {
-                        sessionStorage.setItem("data",JSON.stringify(data))
-                    }
+                    // if (window.confirm("remember the username")) {
+                    //     localStorage.setItem("data",JSON.stringify(data))
+                    // } else {
+                    //     sessionStorage.setItem("data",JSON.stringify(data))
+                    // }
 
                     sessionStorage.setItem("username",data.login)
                     window.location.pathname = "/dashboard"

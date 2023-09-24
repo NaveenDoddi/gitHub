@@ -29,6 +29,9 @@ function Dashboard(){
                         <tr>
                             <td style={{border:"none"}}><h6>{data.bio}</h6></td>
                         </tr>
+                        <tr>
+                            <td style={{border:"none"}}><h6><a href = {data.html_url}> link to github profile</a></h6></td>
+                        </tr>
                     </table>
                 </div>
                 
@@ -55,9 +58,6 @@ function Dashboard(){
                             <tr>
                                 <td><h6>Twitter id</h6></td>
                                 <td><h6>{data.twitter_username}</h6></td>
-                            </tr>
-                            <tr>
-                                <td colSpan={2}><h6><a href = {data.html_url}>profile</a></h6></td>
                             </tr>
                             <tr>
                                 <td style={{border:"none"}} colSpan={2}> 
