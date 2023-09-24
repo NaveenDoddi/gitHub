@@ -40,29 +40,34 @@ function Dashboard(){
                                 <th>{data.name}</th>
                             </tr>
                             <tr>
-                                <td><h6>id</h6></td>
+                                <td><h6>Id</h6></td>
                                 <td><h6>{data.id}</h6></td>
                             </tr>
                             
                             <tr>
-                                <td><h6>joined on</h6></td>
+                                <td><h6>Joined on</h6></td>
                                 <td><h6>{(data.created_at).toString().split("T")[0]}</h6></td>
                             </tr>
                             <tr>
-                                <td><h6>location</h6></td>
+                                <td><h6>Location</h6></td>
                                 <td><h6>{data.location}</h6></td>
                             </tr>
                             <tr>
-                                <td><h6>twitter id</h6></td>
+                                <td><h6>Twitter id</h6></td>
                                 <td><h6>{data.twitter_username}</h6></td>
                             </tr>
                             <tr>
                                 <td colSpan={2}><h6><a href = {data.html_url}>profile</a></h6></td>
                             </tr>
-                            <tr className="row">
-                                <td style={{border:"none"}} className="col"><Following following = {data.following} user = {data.login} /></td>
-                                <td style={{border:"none"}} className="col"><Followers followers = {data.followers} user = {data.login}/></td>
-                                <td style={{border:"none"}} className="col col-sm-12"><Repos count = {data.public_repos} link = {data.repos_url}/></td>
+                            <tr>
+                                <td style={{border:"none"}} colSpan={2}> 
+                                    <div className="row">
+                                        <span className="col"><Following following = {data.following} user = {data.login} /></span>
+                                        <span className="col"><Followers followers = {data.followers} user = {data.login} /></span><br></br>
+                                        <h1 className="text-dark">,</h1>
+                                        <span className="col col-sm-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span>
+                                    </div>
+                                </td>
                             </tr>
 
                         </tbody>

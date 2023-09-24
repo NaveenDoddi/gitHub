@@ -49,7 +49,7 @@ function Followers(props){
         <>
         <div className="dropdown">
 
-        <button className="btn w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowers}> followers {props.followers}</button>
+        <button className="btn w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showFollowers}> Followers {props.followers}</button>
         {loading && 
         
         <div className="dropdown-menu" id="dropdown3" aria-labelledby="dropdownMenuButton" style={{height:"500px",overflow:"scroll", border:"none"}}>
