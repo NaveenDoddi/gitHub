@@ -1,8 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 function Search(){
     
+    var [loading, setLoading] = useState("hidden")
+    
     async function run(){
+        setLoading("visible")
 
         sessionStorage.setItem("username", document.getElementById("username").value)
         var username = sessionStorage.getItem("username")
@@ -13,12 +17,6 @@ function Search(){
             .then((data)=>{
                 if(data.message === undefined){
                     sessionStorage.setItem("data", JSON.stringify(data))
-
-                    // if (window.confirm("remember the username")) {
-                    //     localStorage.setItem("data",JSON.stringify(data))
-                    // } else {
-                    //     sessionStorage.setItem("data",JSON.stringify(data))
-                    // }
 
                     sessionStorage.setItem("username",data.login)
                     window.location.pathname = "/dashboard"
@@ -45,6 +43,9 @@ function Search(){
         <div className="btn-group">
             <input id="username"/>
             <button className="btn btn-info btn-sm" onClick={run}>show</button>
+        </div>
+        <div>
+            <img src="loading.gif" style={{visibility: loading, borderRadius:"50px"}}></img>
         </div>
 
         </>

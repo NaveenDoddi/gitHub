@@ -62,7 +62,6 @@ function Followers(props){
                 
                 </>
                 
-                
             )}
         </div>
         }
