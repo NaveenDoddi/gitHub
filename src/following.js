@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 function Following(props){
-
+    
     var [loading, setLoading] = useState(false)
     var [data, setData] = useState("")
 

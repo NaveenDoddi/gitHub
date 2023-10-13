@@ -30,7 +30,7 @@ function Repos(repos){
         <>
         <div className="dropdown">
 
-        <button className="btn w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showRepos}> Reposetries {repos.count}</button>
+        <button className="btn btn-success w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showRepos}> Reposetries {repos.count}</button>
         {loading && 
         
         <div className="dropdown-menu bg-dark" id="dropdown1" aria-labelledby="dropdownMenuButton" style={{height:"500px",overflow:"scroll", border:"none"}}>
