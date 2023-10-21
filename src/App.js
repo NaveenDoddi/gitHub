@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Dashboard from './dashboard';
 import Login from './login';
@@ -6,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      
+
       <BrowserRouter>
       <Routes>
           <Route path='/' element={<Login/>}/>
