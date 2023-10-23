@@ -72,10 +72,11 @@ function Dashboard(){
                             <tr>
                                 <td style={borderNone} colSpan={2}> 
                                     <div className="row">
-                                        <span className="col"><Following following = {data.following} user = {data.login} /></span>
-                                        <span className="col"><Followers followers = {data.followers} user = {data.login} /></span><br></br>
-                                        <h1 className="text-dark">,</h1>
-                                        <span className="col col-sm-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span>
+                                        <span id="repo1" className="col col-sm-12 col-xs-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span><br></br>
+                                        <h1 id="hiddenh1" className="col col-sm-12"></h1>
+                                        <span className="col col-xs-6"><Following following = {data.following} user = {data.login} /></span>
+                                        <span className="col col-xs-6"><Followers followers = {data.followers} user = {data.login} /></span>
+                                        
                                     </div>
                                 </td>
                             </tr>
