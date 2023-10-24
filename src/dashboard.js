@@ -71,13 +71,12 @@ function Dashboard(){
                             </tr>
                             <tr>
                                 <td style={borderNone} colSpan={2}> 
-                                    <div className="row">
-                                        <span id="repo1" className="col col-sm-12 col-xs-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span><br></br>
-                                        <h1 id="hiddenh1" className="col col-sm-12"></h1>
-                                        <span className="col col-xs-6"><Following following = {data.following} user = {data.login} /></span>
-                                        <span className="col col-xs-6"><Followers followers = {data.followers} user = {data.login} /></span>
-                                        <h1 id="hiddenh2" className="col col-sm-12"></h1>
-                                        <span id="repo2" className="col col-sm-12 col-xs-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span><br></br>
+                                    <div id="container" className="row">
+                                        <span id="repo1" className="col col-xs-12 col-sm-12 col-md-4 col-lg-12"><Repos count = {data.public_repos} link = {data.repos_url} /></span><br></br>
+                                        <h1 id="hiddenh1">.</h1> <br></br>
+                                        <span className="col col-xs-6 col-sm-6 col-md-4 col-lg-6"><Following following = {data.following} user = {data.login} /></span> <br></br>
+                                        <h1 id="hiddenh1">.</h1> <br></br>
+                                        <span className="col col-xs-6 col-sm-6 col-md-4 col-lg-6"><Followers followers = {data.followers} user = {data.login} /></span> <br></br>
 
                                     </div>
                                 </td>

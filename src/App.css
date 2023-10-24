@@ -4,24 +4,14 @@
 .lkfjdsl{
   color:lightcoral
 }
-#repo2{
+
+#hiddenh1{
   display: none;
 }
+
 @media only screen and (max-width: 465px) {
-  #hiddenh1,#repo1{
-    display: none;
-  }
-  #repo2,#hiddenh2{
-    display: block;
-  }
-}
-@media only screen and (max-width: 575px) {
-  #hiddenh1,#hiddenh2{
-    display: none;
-  }
-}
-#dropdown1{
-  height:"500px";
-  overflow:"scroll";
-  border:"none";
+ #container{
+   display:flex;
+   flex-direction: column-reverse;
+ }
 }
