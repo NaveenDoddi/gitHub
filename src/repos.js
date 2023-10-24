@@ -33,7 +33,7 @@ function Repos(repos){
         <button className="btn btn-success w-100 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" onClick={showRepos}> Reposetries {repos.count}</button>
         {loading && 
         
-        <div className="dropdown-menu " id="dropdown1" aria-labelledby="dropdownMenuButton">
+        <div className="dropdown-menu bg-dark" id="dropdown1" aria-labelledby="dropdownMenuButton">
             {data.map((i)=>
                 <>
                 <div id="naveend" className="dropdown-item text-dark">
@@ -53,7 +53,6 @@ function Repos(repos){
                         <tr>
                             <td>created at</td>
                             <td style={{textAlign :"right"}}>{i.created_at.split("T")[1].split("Z")[0]}, {i.created_at.split("T")[0]}</td>
-
                         </tr>
                     </table>
                 </div>
